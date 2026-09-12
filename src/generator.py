@@ -29,7 +29,7 @@ def generate_soft_tweet(article):
         description=article["description"] or article["title"],
     )
     response = client.models.generate_content(
-        model="gemini-2.0-flash",
+        model="gemini-3.6-flash",
         contents=prompt,
     )
     tweet_text = response.text.strip()
