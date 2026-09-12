@@ -6,13 +6,11 @@ load_dotenv()
 
 # DeepSeek uses the OpenAI-compatible endpoint
 client = OpenAI(
-    api_key=os.getenv("DEEPSEEK_API_KEY"),
-    base_url="https://api.deepseek.com"
+    api_key=os.getenv("GROQ_API_KEY"),
+    base_url="https://api.groq.com/openai/v1"
 )
 
-# Model name: use "deepseek-flash" for the latest Flash model
-# (the old name "deepseek-v4-flash" still works but is deprecated)
-MODEL_NAME = os.getenv("DEEPSEEK_MODEL", "deepseek-flash")
+MODEL_NAME = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile")
 
 SOFT_TWEET_PROMPT = """You are a thoughtful tech writer. Write a short, soft, conversational tweet about this article.
 
