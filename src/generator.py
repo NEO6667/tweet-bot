@@ -10,7 +10,7 @@ client = OpenAI(
     base_url="https://api.groq.com/openai/v1"
 )
 
-MODEL_NAME = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile")
+MODEL_NAME = os.getenv("GROQ_MODEL", "openai/gpt-oss-120b")
 
 SOFT_TWEET_PROMPT = """You are a thoughtful tech writer. Write a short, soft, conversational tweet about this article.
 
